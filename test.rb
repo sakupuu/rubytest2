@@ -1,6 +1,6 @@
 def result(player,answers)
     if (player == 0 && answers == "グー") || (player == 1 && answers == "チョキ") || (player == 2 && answers == "パー") 
-      puts "あなたの手：#{player} 私の手：#{answers}\nあいこです"
+      puts "あなたの手：#{"グー" << player} 私の手：#{answers}\nあいこです"
     elsif (player == 0 && answers == "チョキ") || (player == 1 && answers == "パー") || (player == 2 && answers == "グー")
       puts "あなたの手：#{player} 私の手：#{answers}\nあなたの勝ちです"
     elsif (player == 0 && answers == "パー") || (player == 1 && answers == "グー") || (player == 2 && answers == "チョキ")
