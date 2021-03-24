@@ -8,10 +8,8 @@
   answers = ["グー", "チョキ", "パー"]
   answer = answers.sample
 
-  while player < 0 || player > 2 do
+  if player < 0 || player > 2 do
     puts "入力された値が無効です"
-    
-
   elsif player == 0 && answers == "グー"
     puts "あなたの手：#{"グー" << player} 私の手：#{answers}\nあいこです"
     break
