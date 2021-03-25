@@ -30,7 +30,7 @@ puts "最初はグー、じゃんけん..."
 ​
 player = gets.to_i
 ​
-answers = ["グー", "チョキ", "パー"]
+answers = ["グー","チョキ","パー"]
 ​
 answer = answers.sample
 ​
@@ -77,4 +77,3 @@ answer = answers.sample
 # メソッドを一つにしてみましょう。
 # メソッドは１つの方がいいという前提で、一個目のはあいこ用ですかね？だとしたら、メソッド名はjyanken_for_aikoとかの方がいいですね。
 ​
-折りたた
