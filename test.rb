@@ -1,14 +1,16 @@
-def janken(player,answers)
-    if (player == 0 && answers == "グー") || (player == 1 && answers == "チョキ") || (player == 2 && answers == "パー") 
-      puts "あなたの手：#{"グー" << player} 私の手：#{answers}\nあいこです"
-    elsif (player == 0 && answers == "チョキ") || (player == 1 && answers == "パー") || (player == 2 && answers == "グー")
-      puts "あなたの手：#{player} 私の手：#{answers}\nあなたの勝ちです"
-    elsif (player == 0 && answers == "パー") || (player == 1 && answers == "グー") || (player == 2 && answers == "チョキ")
-      puts "あなたの手：#{player} 私の手：#{answers}\n私の勝ちです"
+def janken(player,computer)
+    if (player == 0 && computer == 0) || (player == 1 && computer == 1 ) || (player == 2 && computer ==  2) 
+      puts "あなたの手：#{hands[player]} 私の手：#{hands[computer]}"
+      puts "あいこです"
+    elsif (player == 0 && computer == 1) || (player == 1 && computer == 2) || (player == 2 && computer == 0)
+      puts "あなたの手：#{hands[player]} 私の手：#{hands[computer]}"
+      puts "あなたの勝ちです"
+    elsif (player == 0 && computer == 2) || (player == 1 && computer == 0) || (player == 2 && computer == 1)
+      puts "あなたの手：#{hands[player]} 私の手：#{hands[computer]}"
+      puts "私の勝ちです"
     else 
       puts "入力された値が無効です"
     end 
-  return
 end
 
 puts "最初はグー、じゃんけん..."
@@ -17,21 +19,13 @@ puts "[1]:チョキ"
 puts "[2]:パー"
 
 player = gets.to_i
-# case player
-# when 0
-#   puts "グー"
-# when 1
-#   puts "チョキ"
-# when 2
-#   puts "パー"
-# end
-# answer(Answer.random)
 
+hands = ["グー", "チョキ", "パー"]
 
+computer = hands.sample
 
-answers = ["グー", "チョキ", "パー"]
-answer = answers.sample
-janken(player,answer)
+janken(player,computer)
+
 
 
 # result(player, "グー")
